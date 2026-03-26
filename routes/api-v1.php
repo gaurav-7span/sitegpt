@@ -17,7 +17,7 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('reset-password', 'resetPassword');
 });
 
-Route::apiResource('languages', LanguageController::class)->only(['index', 'show']);
+// Route::apiResource('languages', LanguageController::class)->only(['index', 'show']);
 
 Route::controller(UserController::class)->group(function () {
     Route::get('me', 'me');
@@ -37,6 +37,6 @@ Route::controller(NotificationController::class)->group(function () {
 Route::delete('media/{media}', [MediaController::class, 'destroy']);
 Route::post('logout', [AuthController::class, 'logout']);
 
-Route::get('countries', CountryController::class);
+// Route::get('countries', CountryController::class);
 
 Route::post('generate-signed-url', SignedUrlController::class);
